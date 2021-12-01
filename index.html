@@ -20,10 +20,17 @@
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
     <script src="js/modernizr.custom.js"></script>
+    <script>
+      window.addEventListener("DOMContentLoaded", event => {
+        const audio = document.querySelector("audio");
+        audio.volume = 90;
+        audio.play();
+      });
+    </script>
   </head>
 
   <body>
-    <iframe src="song/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+    <!-- <iframe src="song/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe> -->
     <audio id="player" autoplay loop>
       <source src="song/play.mp3" type="audio/mp3">
     </audio>
